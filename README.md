@@ -10,7 +10,7 @@ If you'd like to support Advent of Code, you can do so indirectly by helping to 
 
 
 ### Join my leaderboard
-you can join my private leaderboard [here](https://adventofcode.com/2019/leaderboard/private):
+you can join my private leaderboard  [here](https://adventofcode.com/2019/leaderboard/private):
        
      2224666-b0499083
 
