@@ -8,6 +8,12 @@ You don't need a computer science background to participate - just a little prog
 
 If you'd like to support Advent of Code, you can do so indirectly by helping to [Share on Twitter ](https://twitter.com/intent/tweet?text=Daily+programming+puzzles+at+Advent+of+Code&url=https%3A%2F%2Fadventofcode%2Ecom%2F&related=ericwastl&hashtags=AdventOfCode) it with others, or directly via [PayPal or Coinbase](https://adventofcode.com/2022/support).
 
+
+### Join my leaderboard
+you can join my private leaderboard [here](https://adventofcode.com/2019/leaderboard/private):
+       
+     2224666-b0499083
+
 ### SOLUTIONS
 
 [Day 1](solutions/day_1.py)
