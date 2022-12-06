@@ -43,6 +43,27 @@ def solution():
 
 
 def solution_part_2():
+  commons = []
+  priority_sum = 0
+  temp_list = []
+  for i in input:
+    temp_list.append(i)
+
+    while len(temp_list) == 3:
+      common_elements = list(
+        set(temp_list[0]).intersection(temp_list[1], temp_list[2])
+      )
+      if common_elements:
+        commons.append(common_elements[0])
+        temp_list.clear()
+
+  for i in commons:
+    if i.isupper():
+      priority_sum += ord(i) - 38
+    if i.islower():
+      priority_sum += ord(i) - 96
+
+  print(priority_sum)
   end_time = time.time()
   print(f"It took {end_time - start_time:.2f} seconds to compute")
 
@@ -54,5 +75,5 @@ if __name__ == '__main__':
   ## challenge input
   convert_test_input(f'inputs/day_{day}.txt')
 
-  solution()
-  # solution_part_2()
+  # solution()
+  solution_part_2()
