@@ -17,3 +17,12 @@ you can join my private leaderboard  [here](https://adventofcode.com/2019/leader
 ### SOLUTIONS
 
 [Day 1](solutions/day_1.py)
+
+[Day 2](solutions/day_2.py)
+
+[//]: # ([Day 3]&#40;solutions/day_3.py&#41;)
+
+[//]: # ([Day 4]&#40;solutions/day_4.py&#41;)
+[Day 5](solutions/day_5.py)
+
+[Day 6](solutions/day_6.py)
