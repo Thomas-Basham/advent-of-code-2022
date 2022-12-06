@@ -36,6 +36,20 @@ def solution():
 
 
 def solution_part_2():
+  temp_list = []
+  indexes_list = []
+  for index, char in enumerate(input):
+    # temp_list.append((index, char))
+    temp_list.append(char)
+    indexes_list.append(index)
+    while len(temp_list) == 14:
+      if len(temp_list) == len(set(temp_list)):  # if no duplicates
+        print("index is", indexes_list[-1] + 1, )
+        print(temp_list)
+        break
+      if len(temp_list) != len(set(temp_list)):  # if duplicates
+        temp_list.pop(0)
+        indexes_list.pop(0)
   end_time = time.time()
   print(f"It took {end_time - start_time:.2f} seconds to compute")
 
@@ -48,4 +62,4 @@ if __name__ == '__main__':
   convert_test_input(f'inputs/day_{day}.txt')
 
   solution()
-  # solution_part_2()
+  solution_part_2()
