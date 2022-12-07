@@ -20,9 +20,10 @@ you can join my private leaderboard  [here](https://adventofcode.com/2019/leader
 
 [Day 2](solutions/day_2.py)
 
-[//]: # ([Day 3]&#40;solutions/day_3.py&#41;)
+[Day 3](solutions/day_3.py)
 
-[//]: # ([Day 4]&#40;solutions/day_4.py&#41;)
+[Day 4](solutions/day_4.py)
+
 [Day 5](solutions/day_5.py)
 
 [Day 6](solutions/day_6.py)
