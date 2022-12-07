@@ -38,6 +38,22 @@ def solution():
 
 
 def solution_part_2():
+
+  pairs = 0
+  for i in input:
+    range_1_list = [i for i in range(min(i[0]), max(i[0]) + 1)]
+    range_2_list = [i for i in range(min(i[1]), max(i[1]) + 1)]
+
+    print(range_1_list)
+    if any(elem in range_1_list for elem in range_2_list) or any(elem in range_2_list for elem in range_1_list):
+      pairs += 1
+
+  print("PAIRS:", pairs)
+  end_time = time.time()
+  print(f"It took {end_time - start_time:.2f} seconds to compute")
+
+
+
   end_time = time.time()
   print(f"It took {end_time - start_time:.2f} seconds to compute")
 
@@ -50,4 +66,4 @@ if __name__ == '__main__':
   convert_test_input(f'inputs/day_{day}.txt')
 
   solution()
-  # solution_part_2()
+  solution_part_2()
