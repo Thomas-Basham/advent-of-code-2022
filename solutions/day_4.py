@@ -38,7 +38,6 @@ def solution():
 
 
 def solution_part_2():
-
   pairs = 0
   for i in input:
     range_1_list = [i for i in range(min(i[0]), max(i[0]) + 1)]
