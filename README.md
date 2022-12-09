@@ -27,3 +27,8 @@ you can join my private leaderboard  [here](https://adventofcode.com/2019/leader
 [Day 5](solutions/day_5.py)
 
 [Day 6](solutions/day_6.py)
+
+[Day 7](solutions/day_7.py)
+
+[Day 8](solutions/day_8.py)
+
