@@ -1,85 +1,53 @@
-# https://adventofcode.com/2022/day/9
+# https://adventofcode.com/2022/day/10
 import time
 import numpy as np
 
-day = "9"
+day = "10"
 inputs = ""
+
 start_time = time.time()
-matrix = []
 
 
 def convert_test_input(case):
-  global matrix
   global inputs
   with open(case) as f:
-    for line in f.read():
+    for line in f.readlines():
       inputs += line
   inputs = inputs.splitlines()
-  # print("INPUTS:", inputs)
 
-  vert_length = 0
-  vert_lengths = []
-  hori_length = 0
-  hori_lengths = []
-  for i in inputs:
-    if i.startswith('U'):
-      vert_length += int(i[2])
-      vert_lengths.append(vert_length)
-    if i.startswith('D'):
-      vert_length -= int(i[2])
-      vert_lengths.append(vert_length)
-
-    if i.startswith('R'):
-      hori_length += int(i[2])
-      hori_lengths.append(hori_length)
-
-    if i.startswith('L'):
-      hori_length -= int(i[2])
-      hori_lengths.append(hori_length)
-
-  # print(vert_length, hori_length)
-
-  matrix_width = max(hori_lengths) + 1
-  matrix_height = max(vert_lengths) + 1
-  print(matrix_width, matrix_height)  # matrix is x width by x tall
-  print("LENGTHS", hori_length, vert_length)
-  for _ in range(matrix_height):
-    matrix.append([0 for _ in range(matrix_width)])
-  # print(matrix)
-  print(np.array(matrix))
+  print("INPUTS:", inputs)
 
 
 def solution():
-  for i in range(len(inputs)):
-    vert_distance = 0
-    hori_distance = 0
-    if inputs[i].startswith('U'):
-      vert_distance += int(inputs[i][2])
-      if vert_distance > 0:
+  signal_strength = 0
+  cycle = 1
+  x = 1
+  for i in inputs:
+    command = i[:4]
+    amount = i[5:]
 
-        for v in range(vert_distance):
-          print(v + 1, "GREATER")
+    cycle += 1
 
-    if inputs[i].startswith('D'):
-      vert_distance -= int(inputs[i][2])
-      print(vert_distance)
-      if vert_distance < 0:
-        for v in range(abs(vert_distance)):
-          print(v + 1, "less")
+    if cycle in range(20, cycle + 1, 40):
+      signal_strength += (cycle * x)
 
-    if inputs[i].startswith('R'):
-      pass
-    if inputs[i].startswith('L'):
-      pass
+    if command.startswith("addx"):
+      x += int(amount)
+      cycle += 1
+      if cycle in range(20, cycle + 1, 40):
+        signal_strength += (cycle * x)
 
   end_time = time.time()
   print(f"It took {end_time - start_time:.2f} seconds to compute")
+
+  print(signal_strength)
+  return signal_strength
 
 
 def solution_part_2():
   end_time = time.time()
   print(f"It took {end_time - start_time:.2f} seconds to compute")
-  
+
 
 if __name__ == '__main__':
   # test input
