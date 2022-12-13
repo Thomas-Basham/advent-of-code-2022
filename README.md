@@ -36,3 +36,5 @@ you can join my private leaderboard  [here](https://adventofcode.com/2019/leader
 
 [Day 10](solutions/day_10.py)
 
+[Day 11](solutions/day_10.py)
+
