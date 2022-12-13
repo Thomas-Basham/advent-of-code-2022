@@ -82,7 +82,6 @@ def solution_part_2():
 
   for i in rows:
     print(i)
-
   end_time = time.time()
   print(f"It took {end_time - start_time:.2f} seconds to compute")
 
